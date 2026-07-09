@@ -1,0 +1,53 @@
+The project will analyze a few types of document:
+receipts; letters; and documents (essays, articles, and etc.)
+
+1. Receipts:
+
+Requirements:
+- Merchant Name (type: str)
+- Time of Purchase (type: int; methods: unsigned)
+- Date of Purchase (type: int; methods: unsigned)
+- Subtotal (total cost; fees; and taxes): (type: float; methods: signed)
+- Total (type: float; methods: signed)
+- Payment Type: Cash, DISCOVER, AMEX, or Visa: (type: str)
+- Payment Credentials (last 4 card number): (type: ints; methods: len: 4; methods: unsigned)
+
+- Items Purchased (Name and Price):
+
+
+Additionals:
+- Transcation Number (ID): (type: int; methods: unsigned)
+- Location Phone: (type: int; methods: unsigned; len: 13)
+- Location Email: (type: str)
+- Location ID: (type: int; methods: unsigned)
+- Locaation Open Hours: (type: int; methods: unsigned)
+- Location Close Hours: (type: int; methods: unsigned)
+- Location Address: (type: str)
+- Leadership Phone (Site Manager): (type: int; methods: unsigned)
+- Leadership Email (Site Manager): (type: str)
+- Leadership Name (Site Manager): (type: str)
+- Item Count (Eg. 'Items Sold: 3'): (type: int; methods: unsigned)
+- Bar Code (Transaction Number): (type: int; methods: unsigned)
+- Coupons (Discount Codes): (type: str)
+
+2. Letters
+
+Requirements:
+- Sender Name (Full Name)
+- Sender's Address (Return)
+- Recipient's Address
+- Body
+
+Additional:
+- Recipient's Name (Business Name; Person's Name; Building Name)
+- Decorators (Greeting and Closing)
+
+3. Documnents
+
+Requirements:
+- Body
+
+Additionals:
+- Document Title
+- Author
+- Published Date
