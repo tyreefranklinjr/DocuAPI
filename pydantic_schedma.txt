@@ -1,12 +1,15 @@
 The project will analyze a few types of document:
 receipts; letters; and documents (essays, articles, and etc.)
 
+The purpose of this pydantic schema is to investigate the system architecture for the API.
+This schema assigns specific variables that the API credentials will capture.
+
 1. Receipts:
 
 Requirements:
 - Merchant Name (type: str)
 - Time of Purchase (type: int; methods: unsigned)
-- Date of Purchase (type: int; methods: unsigned)
+- Date of Purchase (type: int (YYYYMMD); methods: unsigned)
 - Subtotal (total cost; fees; and taxes): (type: float; methods: signed)
 - Total (type: float; methods: signed)
 - Payment Type: Cash, DISCOVER, AMEX, or Visa: (type: str)
@@ -33,21 +36,22 @@ Additionals:
 2. Letters
 
 Requirements:
-- Sender Name (Full Name)
-- Sender's Address (Return)
-- Recipient's Address
-- Body
+- Sender Name (Full Name): (type: str)
+- Sender's Address (Return): (type: str)
+- Recipient's Address: (type: str)
+- Body Text: (type: str)
 
 Additional:
-- Recipient's Name (Business Name; Person's Name; Building Name)
-- Decorators (Greeting and Closing)
+- Recipient's Name (Business Name, Person's Name, Building Name): (type: str)
+- Decorator Greeting: (type: str)
+- Decorator Closing: (type: str)
 
 3. Documnents
 
 Requirements:
-- Body
+- Body: (type: str)
 
 Additionals:
-- Document Title
-- Author
-- Published Date
+- Document Title: (type: str)
+- Author: (type: str)
+- Published Date (type: int (YYYYMMD))
