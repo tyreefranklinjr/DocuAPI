@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:17
+    container_name: docuapi-db
+    environment:
+      POSTGRES_USER: docuapi
+      POSTGRES_PASSWORD: docuAPI123
+      POSTGRES_DB: docuapi
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  pgdata:
